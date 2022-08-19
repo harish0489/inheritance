@@ -9,8 +9,54 @@
     <title>Document</title>
 </head>
 <style>
- 
+    .initial {
+        margin: 50px;
+        height: 20vw;
+        display: flex;
+    }
+    .left, .right{
+        flex: 1;
+        width: 50%;
+    }
+    div {
+        margin: 20px 5px;
+    }
+    .right p{
+        font-size: 18px;
+        margin : 20px 0;
+        line-height: 125%;
+    }
+
+    .withInheritOne{
+        font-size: 2rem;
+    }
+
+    .withoutInherit{
+        border: 2px red solid;
+    }
+
+    .withInheritTwo{
+        border: 2px blue solid;
+    }
+
+
+    .withInheritTwo__inherit{
+        border:inherit;
+    }
+
+    .video {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    a{
+        color : blue;
+        font-weight: 700;
+    }
 </style>
+
 <body>
     <nav>
         <ul>
@@ -20,9 +66,48 @@
             <li><a href="revert.html">Revert</a></li>
         </ul>
     </nav>
-    <main>
-        <h3>CSS Inheritence - Inherit</h3>
-    </main>
 </body>
+<main>
+    <h3>CSS Inheritence - Inherit</h3>
+    <section class="initial">
+       <div class="left">
+        <div class="withInheritOne">
+            I am a DIV
+            <p> I am a Paragraph</p>
+        </div>
+        <div class="withoutInherit">
+            I am a DIV
+            <p> I am a Paragraph</p>
+        </div>
+        <div class="withInheritTwo">
+            I am a DIV
+            <p class="withInheritTwo__inherit"> I am a Paragraph</p>
+        </div>
+       </div>
+       <div class="right">
+
+        <div class="withInheritOne">
+
+            <p> The first block with class name <kbd>withInheritOne</kbd> has the font size set as 2 rem and has inherited to the child <kbd>p</kbd> tag without explicitly mentioning </p>
+           
+        
+            <p> The second block with class name <kbd>withoutInherit</kbd> has the border set to <kbd>red</kbd> and has not inherited to the child <kbd>p</kbd> as the border property by default doesnt inherit </p>
+
+
+            <p> The third block with class name <kbd>withInheritTwo</kbd> has the border set to <kbd>blue</kbd> and has  inherited to the child <kbd>p</kbd> as we have overridden the default formal definition property </p>
+
+         
+
+       </div>
+    </section>
+    <section class="video">
+        <div class="inspect">
+            <video width="1020" height="540" controls>
+                <source src="./assets/inherit_inspect_video.mov" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+</main>
 
 </html>

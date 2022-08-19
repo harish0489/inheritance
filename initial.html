@@ -13,8 +13,12 @@
         margin: 50px;
         height: 20vw;
         border: 0.5px solid grey;
+        display: flex;
     }
-
+    .left, .right{
+        flex: 1;
+        width: 50%;
+    }
     div {
         margin: 20px 5px;
     }
@@ -37,6 +41,16 @@
         justify-content: center;
         align-items: center;
     }
+
+    p{
+        font-size: 18px;
+        margin : 10px 0;
+    }
+
+    a{
+        color : blue;
+        font-weight: 700;
+    }
 </style>
 
 <body>
@@ -52,6 +66,7 @@
 <main>
     <h3>CSS Inheritence - Initial</h3>
     <section class="initial">
+       <div class="left">
         <div id="default">
             I am the Default DIV
         </div>
@@ -61,6 +76,15 @@
         <div class="two">
             I am DIV Two at initial state
         </div>
+       </div>
+       <div class="right">
+            <p> The div with id set to <kbd><i>default</i></kbd> takes the browser's user agent stylesheet which is <kbd><i>block</i></kbd></p>
+
+            <p> The div with class set to <kbd><i>one</i></kbd> and <kbd><i>two</i></kbd> is set to initial and it takes behaves as as inline element.</p>
+
+            <p> Please refer to <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/initial">MDN Docs</a> for detailed information</p>
+
+       </div>
     </section>
     <section class="video">
         <div class="inspect">
