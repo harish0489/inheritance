@@ -9,24 +9,36 @@
     <title>Document</title>
 </head>
 <style>
-    .initial{
-        margin : 50px;
-        height : 30vw;
-        border : 0.5px solid grey;
+    .initial {
+        margin: 50px;
+        height: 20vw;
+        border: 0.5px solid grey;
     }
-    
+
+    div {
+        margin: 20px 5px;
+    }
+
     .one {
         background-color: aquamarine;
     }
 
-    .two{
+    .two {
         background-color: #ffc0cb;
     }
 
-    .initial div{
+    .one,
+    .two {
         display: initial;
     }
+
+    .video {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 </style>
+
 <body>
     <nav>
         <ul>
@@ -39,15 +51,25 @@
 </body>
 <main>
     <h3>CSS Inheritence - Initial</h3>
-</main>
-
-<section class="initial">
+    <section class="initial">
+        <div id="default">
+            I am the Default DIV
+        </div>
         <div class="one">
-            I am DIV One
+            I am DIV One at initial state
         </div>
         <div class="two">
-            I am DIV Two
+            I am DIV Two at initial state
         </div>
+    </section>
+    <section class="video">
+        <div class="inspect">
+            <video width="1020" height="540" controls>
+                <source src="./assets/initial.mov" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+</main>
 
-</section>    
 </html>
